@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+  <title>Starter Template for Bootstrap</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../../dist/css/bootstrap.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css">
+  <script src="http://getbootstrap.com/assets/js/jquery.js"></script>
+  <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+  <link href="..//assets/css/calendar.css" rel="stylesheet">
+  <link href="..//assets/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="..//assets/css/frontierCalendar/jquery-frontier-cal-1.3.2.css" />
+  <link rel="stylesheet" type="text/css" href="..//assets/css/colorpicker/colorpicker.css" />
+  <link rel="stylesheet" type="text/css" href="..//assets/css/jquery-ui/smoothness/jquery-ui-1.8.1.custom.css" />
+  <script type="text/javascript" src="..//assets/js/jquery-core/jquery-1.4.2-ie-fix.min.js"></script>
+  <script type="text/javascript" src="..//assets/js/jquery-ui/smoothness/jquery-ui-1.8.1.custom.min.js"></script>
+  <script type="text/javascript" src="..//assets/css/js/colorpicker/colorpicker.js"></script>
+  <script type="text/javascript" src="..//assets/js/jquery-qtip-1.0.0-rc3140944/jquery.qtip-1.0.js"></script>
+  <script type="text/javascript" src="..//assets/js/lib/jshashtable-2.1.js"></script>
+  <script type="text/javascript" src="..//assets/js/frontierCalendar/jquery-frontier-cal-1.3.2.min.js"></script>
+  <script type="text/javascript" src="..//assets/cal.js"></script>
+
+  <style>
+  body{
+
+    background:url(http://developer.jmbarcelon.com/img/blurredbackgreen.jpg)no-repeat;
+
+  }
+  </style>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+      <![endif]-->
+
+    </head>
+
+    <body>
+     <div class="container">
+          <div>
+            <div class="navbar navbar-inverse navbar-static-top" style="margin-top:10px;">
+              <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand brandrotate logoset" style="padding: 0; margin: 0;" href="#"><img src="..//assets/images/doo.png" class="logo"></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="./view/contact.html">Contact</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="./view/calendar.html">Calender</a></li>
+                        <li><a href="#">Blog</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<div>
+    <div>
+    <div>
+      <div id="example" style="margin: auto; width:80%; text-align: center;">
+        <div id="toolbar" class="calhead">
+          <button id="BtnPreviousMonth" class="btn btn-info"> << </button>
+          &nbsp;&nbsp;&nbsp;
+          Date: <input type="text" id="dateSelect" size="20"/>
+          &nbsp;&nbsp;&nbsp;
+          <button id="BtnDeleteAll">Delete All</button>
+          <button id="BtnNextMonth" class="btn btn-info"> >> </button>
+        </div>
+        <br>
+        <div id="mycal"></div>
+      </div>
+      <div id="calDebug"></div>
+      <div id="add-event-form" title="Add New Event">
+        <p class="validateTips">All form fields are required.</p>
+        <form>
+          <fieldset>
+            <label for="name">What?</label>
+            <input type="text" name="what" id="what" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;"/>
+            <table style="width:100%; padding:5px;">
+              <tr>
+                <td>
+                  <label>Start Date</label>
+                  <input type="text" name="startDate" id="startDate" value="" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;"/>        
+                </td>
+                <td>&nbsp;</td>
+                <td>
+                  <label>Start Hour</label>
+                  <select id="startHour" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;">
+                    <option value="12" SELECTED>12</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                  </select>       
+                  <td>
+                    <td>
+                      <label>Start Minute</label>
+                      <select id="startMin" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;">
+                        <option value="00" SELECTED>00</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                      </select>       
+                      <td>
+                        <td>
+                          <label>Start AM/PM</label>
+                          <select id="startMeridiem" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;">
+                            <option value="AM" SELECTED>AM</option>
+                            <option value="PM">PM</option>
+                          </select>       
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label>End Date</label>
+                          <input type="text" name="endDate" id="endDate" value="" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;"/>        
+                        </td>
+                        <td>&nbsp;</td>
+                        <td>
+                          <label>End Hour</label>
+                          <select id="endHour" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;">
+                            <option value="12" SELECTED>12</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                          </select>       
+                          <td>
+                            <td>
+                              <label>End Minute</label>
+                              <select id="endMin" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;">
+                                <option value="00" SELECTED>00</option>
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                                <option value="40">40</option>
+                                <option value="50">50</option>
+                              </select>       
+                              <td>
+                                <td>
+                                  <label>End AM/PM</label>
+                                  <select id="endMeridiem" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;">
+                                    <option value="AM" SELECTED>AM</option>
+                                    <option value="PM">PM</option>
+                                  </select>       
+                                </td>       
+                              </tr>     
+                            </table>
+                            <table>
+                              <tr>
+                                <td>
+                                  <label>Background Color</label>
+                                </td>
+                                <td>
+                                  <div id="colorSelectorBackground"><div style="background-color: #333333; width:30px; height:30px; border: 2px solid #000000;"></div></div>
+                                  <input type="hidden" id="colorBackground" value="#333333">
+                                </td>
+                                <td>&nbsp;&nbsp;&nbsp;</td>
+                                <td>
+                                  <label>Text Color</label>
+                                </td>
+                                <td>
+                                  <div id="colorSelectorForeground"><div style="background-color: #ffffff; width:30px; height:30px; border: 2px solid #000000;"></div></div>
+                                  <input type="hidden" id="colorForeground" value="#ffffff">
+                                </td>           
+                              </tr>       
+                            </table>
+                          </fieldset>
+                        </form>
+                      </div>
+                      <div id="display-event-form" title="View Agenda Item">
+                      </div>    
+                      <p>&nbsp;</p>
+                    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+ 
+  </body>
+  </html>

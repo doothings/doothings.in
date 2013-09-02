@@ -1,0 +1,55 @@
+body {
+  padding-top: 50px;
+}
+.calendar {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+ 
+.shadow {
+    -moz-box-shadow: 3px 3px 4px #aaaaaa;
+    -webkit-box-shadow: 3px 3px 4px #aaaaaa;
+    box-shadow: 3px 3px 4px #aaaaaa;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#aaaaaa')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#aaaaaa');
+  }
+
+  label, input.text, select { display:block; }
+			fieldset { padding:0; border:0; margin-top:25px; }
+			.ui-dialog .ui-state-error { padding: .3em; }
+			.validateTips { border: 1px solid transparent; padding: 0.3em; }
+
+.ui-button-text{
+	font-size: 85%;
+	padding: 1em;
+}
+
+.calhead{
+	padding:3px;
+	vertical-align: middle;
+	white-space:nowrap;
+	overflow: hidden;
+	background: #eee;
+}
+
+.JFrontierCal-Day-Cell-Today {
+	background-image: -webkit-gradient(linear, right top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #00A3EF)) !important;
+}
+
+.JFrontierCal-Day-Cell{
+	border: 1px solid #666;
+	background: #fff !important;
+	opacity: .3;
+}
+
+.JFrontierCal-Week-Header-Cell{
+
+background: #fff !important;
+	opacity: .3;
+}
+
+.JFrontierCal-NextMonth-Day-Cell{
+	background: #000 !important;
+	opacity: .3;	
+}
