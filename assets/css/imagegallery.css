@@ -1,0 +1,179 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+ol,ul {
+	list-style:none;
+}
+
+
+.lb-album li{
+	float: left;
+	margin: 5px;
+	position: relative;
+}
+.lb-album li > a,
+.lb-album li > a img{
+	display: block;
+}
+.lb-album li > a{
+	width: 150px;
+	height: 150px;
+	position: relative;
+	padding: 10px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px 4px 4px 4px;
+}
+.lb-album li > a span{
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	top: 10px;
+	left: 10px;
+	text-align: center;
+	line-height: 150px;
+	color: #fff;
+	font-size: 24px;
+	opacity: 0;
+	background: #333;
+	-webkit-transition: opacity 0.3s linear;
+	-moz-transition: opacity 0.3s linear;
+	-o-transition: opacity 0.3s linear;
+	-ms-transition: opacity 0.3s linear;
+	transition: opacity 0.3s linear;
+}
+.lb-album li > a:hover span{
+	opacity: .8;
+	
+}
+.lb-overlay{
+	width: 0px;
+	height: 0px;
+	position: fixed;
+	overflow: hidden;
+	left: 0px;
+	top: 0px;
+	padding: 0px;
+	z-index: 99;
+	text-align: center;
+	background: grey;
+	
+}
+.lb-overlay > div{
+	position: relative;
+	color: rgba(27,54,81,0.8);
+	opacity: 0;
+	width: 550px;
+	margin: 10px auto 0px auto;
+	-webkit-transition: opacity 0.3s linear 1.3s;
+	-moz-transition: opacity 0.3s linear 1.3s;
+	-o-transition: opacity 0.3s linear 1.3s;
+	-ms-transition: opacity 0.3s linear 1.3s;
+	transition: opacity 0.3s linear 1.3s;
+}
+.lb-overlay div h3,
+.lb-overlay div p{
+	padding: 0px 20px;
+	width: 200px;
+	height: 60px;
+}
+.lb-overlay div h3{
+	font-size: 36px;
+	float: left;
+	text-align: right;
+	border-right: 1px solid rgba(27,54,81,0.4);
+}
+.lb-overlay div h3 span,
+.lb-overlay div p{
+	font-size: 16px;
+	font-style: italic;
+}
+.lb-overlay div h3 span{
+	display: block;
+	line-height: 6px;
+}
+.lb-overlay div p{
+	text-align: left;
+	float: left;
+	width: 260px;
+}
+.lb-overlay a.lb-close{
+	background: rgba(27,54,81,0.8);
+	z-index: 1001;
+	color: #fff;
+	position: absolute;
+	top: 43px;
+	left: 50%;
+	font-size: 15px;
+	line-height: 26px;
+	text-align: center;
+	width: 50px;
+	height: 23px;
+	overflow: hidden;
+	margin-left: -25px;
+	opacity: 0;
+	-webkit-transition: opacity 0.3s linear 1.2s;
+	-moz-transition: opacity 0.3s linear 1.2s;
+	-o-transition: opacity 0.3s linear 1.2s;
+	-ms-transition: opacity 0.3s linear 1.2s;
+	transition: opacity 0.3s linear 1.2s;
+}
+.lb-overlay img{
+	/* height: 100%; For Opera max-height does not seem to work */
+	max-height: 100%;
+	position: relative;
+	-webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+	-moz-box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+	box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
+}
+.lb-overlay:target {
+	width: auto;
+	height: auto;
+	bottom: 0px;
+	right: 0px;
+	padding: 80px 100px 120px 100px;
+}
+.lb-overlay:target img {
+	-webkit-animation: fadeInScale 1.2s ease-in-out;
+	-moz-animation: fadeInScale 1.2s ease-in-out;
+	-o-animation: fadeInScale 1.2s ease-in-out;
+	-ms-animation: fadeInScale 1.2s ease-in-out;
+	animation: fadeInScale 1.2s ease-in-out;
+}
+.lb-overlay:target a.lb-close,
+.lb-overlay:target > div{
+	opacity: 1;
+}
+@-webkit-keyframes fadeInScale {
+  0% { -webkit-transform: scale(0.6); opacity: 0; }
+  100% { -webkit-transform: scale(1); opacity: 1; }
+}
+@-moz-keyframes fadeInScale {
+  0% { -moz-transform: scale(0.6); opacity: 0; }
+  100% { -moz-transform: scale(1); opacity: 1; }
+}
+@-o-keyframes fadeInScale {
+  0% { -o-transform: scale(0.6); opacity: 0; }
+  100% { -o-transform: scale(1); opacity: 1; }
+}
+@-ms-keyframes fadeInScale {
+  0% { -ms-transform: scale(0.6); opacity: 0; }
+  100% { -ms-transform: scale(1); opacity: 1; }
+}
+@keyframes fadeInScale {
+  0% { transform: scale(0.6); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* 
+	100% Height for Opera as the max-height seems to be ignored, not optimal for large screens 
+	http://bricss.net/post/11230266445/css-hack-to-target-opera 
+*/
+x:-o-prefocus, .lb-overlay img {
+    height: 100%;
+}

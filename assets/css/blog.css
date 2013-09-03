@@ -1,0 +1,209 @@
+body {
+  padding-top: 20px;
+}
+
+.footer {
+  border-top: 1px solid #eee;
+  margin-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Customize the nav-justified links to be fill the entire space of the .navbar */
+
+.nav-justified {
+  background-color: #eee;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.nav-justified > li > a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #777;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid #d5d5d5;
+  background-color: #e5e5e5; /* Old browsers */
+  background-repeat: repeat-x; /* Repeat the gradient */
+  background-image: -moz-linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%); /* FF3.6+ */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+  background-image: -webkit-linear-gradient(top, #f5f5f5 0%,#e5e5e5 100%); /* Chrome 10+,Safari 5.1+ */
+  background-image: -ms-linear-gradient(top, #f5f5f5 0%,#e5e5e5 100%); /* IE10+ */
+  background-image: -o-linear-gradient(top, #f5f5f5 0%,#e5e5e5 100%); /* Opera 11.10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+  background-image: linear-gradient(top, #f5f5f5 0%,#e5e5e5 100%); /* W3C */
+}
+.nav-justified > .active > a,
+.nav-justified > .active > a:hover,
+.nav-justified > .active > a:focus {
+  background-color: #ddd;
+  background-image: none;
+  box-shadow: inset 0 3px 7px rgba(0,0,0,.15);
+}
+.nav-justified > li:first-child > a {
+  border-radius: 5px 5px 0 0;
+}
+.nav-justified > li:last-child > a {
+  border-bottom: 0;
+  border-radius: 0 0 5px 5px;
+}
+
+@media (min-width: 768px) {
+  .nav-justified {
+    max-height: 52px;
+  }
+  .nav-justified > li > a {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #d5d5d5;
+  }
+  .nav-justified > li:first-child > a {
+    border-left: 0;
+    border-radius: 5px 0 0 5px;
+  }
+  .nav-justified > li:last-child > a {
+    border-radius: 0 5px 5px 0;
+    border-right: 0;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .masthead,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+----------------------------------------------------
+
+/************************RESET************************/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a {
+  color: #AF1708;
+  -webkit-transition: .25s color linear;
+  -moz-transition: .25s color linear;
+  -o-transition: .25s color linear;
+  transition: .25s color linear;
+}
+a:hover {
+  color: #181818;
+  -webkit-transition: .25s color linear;
+  -moz-transition: .25s color linear;
+  -o-transition: .25s color linear;
+  transition: .25s color linear;
+}
+
+
+/*****************************************************/
+
+
+body {
+  background: #fefefe; 
+  color: ;
+  font-family: Georgia, serif; 
+  margin: 50px 0;
+  padding: 0 25px;
+}
+
+section {
+  max-width: 600px;
+  min-width: 280px;
+  margin: 0 auto;
+}
+
+/*div:first-child {border-top: dotted 1px rgba(0,0,0,.1);}
+p.username:first-child {margin-top: 50px;}*/
+div:last-child {border: none;}
+
+p.username { 
+  font: italic 18px Georgia; 
+  margin-bottom: 25px; 
+}
+
+p.username a {
+  color: #BF1708; 
+  margin-left: 5px; 
+  text-transform: lowercase; 
+  text-decoration: none;
+}
+
+p.username a:hover {color: #181818;}
+
+p.username img {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-width: 0; 
+  vertical-align: middle;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+}
+
+p.info {
+  font-size: 15px; 
+  line-height: 24px; 
+  text-indent: 25px;
+  margin-left: 60px;
+  margin-bottom: 50px;
+}
+
+
+.disclaimer {
+  width: 100%;
+  color: rgba(0,0,0,.625);
+  font: italic 12px/24px Georgia;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+
+/* Smartphones Landscape */
+@media (max-width: 480px) {
+  section {max-width: 400px;}
+  div {padding: 0 25px;}
+  p.info {margin-left: 0;}
+  .disclaimer {
+    width: 280px; 
+    padding: 0 25px;
+  }
+}
+
+
+/* Smartphones Portrait */
+@media (max-width: 320px) {
+  section {max-width: 280px;}
+  p.info {margin-left: 0;}
+  .disclaimer {
+    width: 220px;
+    text-align: center;
+    margin: 0 auto 50px auto;
+    padding: 0;
+  }
+}
+
+.user{
+  background: #eee;
+  
+}
