@@ -1,0 +1,45 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+@import url('fonts/fonts.css');
+@import url('reset.css');
+
+body {
+	padding-top: 50px;
+	padding-bottom: 20px;
+	background: #fff;
+
+
+}
+
+.face {
+
+	z-index: 1;
+	border-radius: 100%;
+	width: 100px !important;
+	height: 100px !important;
+	overflow: hidden;
+	border: 0px solid black;
+	padding: 5px;
+	margin: 2px;
+}
+
+.android{
+
+}
+
+.wrench{
+
+}
+
+.globe{
+
+}
+
+.arrow{
+	width: 0; 
+	height: 0; 
+	border-top: 300px solid transparent;
+	border-bottom: 0px 10px solid transparent;
+	border-left: 300px solid grey;
+	left:0; bottom:0px !important;
+	position: fixed;
+}
