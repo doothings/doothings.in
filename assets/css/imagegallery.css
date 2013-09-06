@@ -2,7 +2,7 @@ body {
   padding-top: 50px;
 }
 .starter-template {
-  padding: 40px 15px;
+  padding: 80px 15px;
   text-align: center;
 }
 
@@ -62,6 +62,7 @@ ol,ul {
 	z-index: 99;
 	text-align: center;
 	background: grey;
+	clear: both;
 	
 }
 .lb-overlay > div{
@@ -136,7 +137,6 @@ ol,ul {
 	height: auto;
 	bottom: 0px;
 	right: 0px;
-	padding: 80px 100px 120px 100px;
 }
 .lb-overlay:target img {
 	-webkit-animation: fadeInScale 1.2s ease-in-out;
@@ -176,4 +176,17 @@ ol,ul {
 */
 x:-o-prefocus, .lb-overlay img {
     height: 100%;
+}
+
+.img-thumbnail {
+display: inline-block;
+height: auto;
+max-width: 100%;
+padding: 0px !important;
+line-height: 1.428571429;
+background-color: #fff;
+border: none !important;
+border-radius: 0px;
+-webkit-transition: all .2s ease-in-out;
+transition: all .2s ease-in-out;
 }
