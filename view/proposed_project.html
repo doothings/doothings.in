@@ -6,7 +6,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="shortcut icon" href="../../assets/ico/favicon.png">
-  <title>project</title>
+  <title>proposed_project</title>
   <!-- Bootstrap core CSS -->
   <link href="../../dist/css/bootstrap.css" rel="stylesheet">
   <!-- Custom styles for this template -->
@@ -17,7 +17,7 @@
   <!-- Custom styles for this template -->
   <link href="..//assets/css/contact.css" rel="stylesheet">
   <link href="..//assets/css/main.css" rel="stylesheet">
-  <link href="..//assets/css/project.css" rel="stylesheet">
+  <link href="..//assets/css/proposed.css" rel="stylesheet">
   <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
   <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -48,55 +48,43 @@
               </ul>
             </li>
           </ul>
+          <a href="project.html"><span class="btn btn-primary pull-right" style="margin-top: 10px;">Back</a></span>
         </div><!-- /.nav-collapse -->
       </div>
       <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="container">
-      <!-- Example row of columns -->
-      <div class="row" style="padding: 20px; text-align: center;">
-        <div class="col-md-3">
-          <div class="pan">
-                <h2>Completd Projects</h2>
-                <hr>
-                <span class="bl-box">
-                  <i class="icon-ok-sign" style="zoom: 8; position: relative;"></i></span>
-                <hr>
-                <p><a class="btn btn-success btn-large" href="completed_project.html">Details</a></p>
-              </div>
-        </div>
-        <div class="col-md-3" align="center;">
-          <div class="pan">
-                <h2>Ongoing Projects</h2>
-                <hr>
-                <span class="bl-box">
-                  <i class="icon-gears" style="zoom: 8; position: relative;"></i></span>
-                <hr>
-                <p><a class="btn btn-success btn-large" href="completed_project.html"> Details</a></p>
-              </div>
-        </div>
-       <div class="col-md-3" align="center;">
-          <div class="pan">
-                <h2>Proposed Projects</h2>
-                <hr>
-                <span class="bl-box">
-                  <i class="icon-legal" style="zoom: 8; position: relative;"></i></span>
-                <hr>
-                <p><a class="btn btn-success btn-large" href="proposed_project.html">Details</a></p>
-              </div>
-        </div>
-        <div class="col-md-3" align="center;">
-          <div class="pan">
-                <h2>Upcoming Projects</h2>
-                <hr>
-                <span class="bl-box">
-                  <i class="icon-gear" style="zoom: 8; position: relative;"></i></span>
-                <hr>
-                <p><a class="btn btn-success btn-large" href="completed_project.html">Details</a></p>
-              </div>
-        </div>
-      </div>
- 
-    </div> <!-- /container -->
+      <div class="container" style="padding-top: 20px">
+
+       <div class="col-md-8 well col-md-offset-2">
+        <div class="row">
+          <div class="col-md-5">
+            <label>First Name</label><br/>
+            <input type="text" placeholder="Your First Name" class="form-control"> <br/>
+            <label>Last Name</label><br/>
+            <input type="text" placeholder="Your Last Name" class="form-control"> <br/>
+            <label>Email Address</label><br/>
+            <input type="text" placeholder="Your email address" class="form-control"> <br/>
+            <label>Mobile Number</label><br/>
+            <input type="text" placeholder="Your mobile number" class="form-control" style="-wap-input-format: 'N'"/> <br/>
+            <label>Subject</label><br/>
+
+            <div class="btn-group">
+              <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+                Choose one<span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href=""> Suggestions</li></a>
+                <li><a href=""> Project Details</li></a>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+           <label>Message</label><br/>
+           <textarea name="message" id="message" class="col-md-12" rows="10"></textarea><br/>
+           <br/><span style="margin-top: 5px;"><button type="submit" class="btn btn-primary">Send</button></span>
+         </div>
+       </div>
+     </div>
+   </div>
 
 
 
