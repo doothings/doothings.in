@@ -150,3 +150,12 @@ background: cornsilk;
 .icon-gear:hover{
     color: #3498db;
 }
+
+.project-tag{
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  text-align: center;
+  padding: 3px 0px;
+  color: #fff;
+  font-weight: lighter;
+}

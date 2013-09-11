@@ -38,3 +38,12 @@ body {
 	margin: 5px;
 	color: #fff;
 }
+
+.about{
+	text-align: center;
+}
+
+.sign-bg{
+	 background: indianred;
+	 margin-right: 8%;
+}
