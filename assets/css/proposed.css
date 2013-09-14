@@ -135,7 +135,7 @@ body {
 
 .pan {
 min-height: 20px;
-padding: 19px;
+padding: 5px;
 margin-bottom: 20px;
 background-color: #f5f5f5;
 border: 1px solid #e3e3e3;
@@ -154,4 +154,345 @@ border: 1px solid #e3e3e3;
 
 .icon-gear:hover{
     color: #3498db;
+}
+ 
+ <!--       asdf      -->
+ 
+ 
+
+/* Hide nav-handler checkbox */
+
+#nav-handler {
+display: none;
+}
+
+/* Header */
+
+#header {
+position: static;
+top: 0;
+left: 0;
+width: 100%;
+height: 75px;
+padding: 20px;
+text-align: center;
+z-index: 2;
+border-bottom: 1px solid #bbb;
+background: #eee;
+}
+
+/* Header menu button */
+
+#menu-button {
+top: 10px;
+text-align: center;
+color: #fff;
+cursor: default;
+
+}
+
+ 
+/* Header active menu button */
+
+#nav-handler:checked ~ #menu-button {
+color: #08c;
+border: 1px solid #08c;
+}
+
+/* Slide out navigation */
+
+#nav {
+position: fixed;
+margin-top: 0px;
+left: 0;
+width: 80%;
+height: 100%;
+z-index: 1;
+overflow: auto;
+-webkit-overflow-scrolling: touch;
+transition: opacity 0s .25s;
+-moz-transition: opacity 0s .25s;
+-webkit-transition: opacity 0s .25s;
+border-right: 1px solid #bbb;
+background: #fff;
+color: #555;
+}/* Move down content because we have a fixed navbar that is 50px tall */
+@import url('fonts/fonts.css');
+@import url('reset.css');
+
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  background: #fff;
+
+
+}
+
+.pricing-table .plan {
+  border-radius: 5px;
+  text-align: center;
+  background-color: #f3f3f3;
+  
+ 
+}
+ 
+ .plan:hover {
+  background-color: #fff;
+  border: 1px solid #333;
+}
+ 
+ .plan {
+  padding: 20px;
+  color: #ff;
+  background-color: #5e5f59;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  margin: 5px;
+}
+  
+.plan-name-bronze {
+  padding: 20px;
+  color: #fff;
+  background-color: #665D1E;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+ }
+  
+.plan-name-silver {
+  padding: 20px;
+  color: #fff;
+  background-color: #C0C0C0;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+ }
+  
+.plan-name-gold {
+  padding: 20px;
+  color: #fff;
+  background-color: #FFD700;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  } 
+  
+.pricing-table-bronze  {
+  padding: 20px;
+  color: #fff;
+  background-color: #f89406;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+}
+  
+.pricing-table .plan .plan-name span {
+  font-size: 20px;
+}
+ 
+.pricing-table .plan ul {
+  list-style: none;
+  margin: 0;
+  -moz-border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+}
+ 
+.pricing-table .plan ul li.plan-feature {
+  padding: 15px 10px;
+  border-top: 1px solid #c5c8c0;
+}
+ 
+.pricing-three-column {
+  margin: 0 auto;
+  width: 80%;
+}
+ 
+.pricing-variable-height .plan {
+  float: none;
+  margin-left: 2%;
+  vertical-align: bottom;
+  display: inline-block;
+  zoom:1;
+  *display:inline;
+}
+ 
+.plan-mouseover .plan-name {
+  background-color: #4e9a06 !important;
+}
+ 
+.btn-plan-select {
+  padding: 8px 25px;
+  font-size: 18px;
+}
+
+.bl-box {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.pan {
+min-height: 20px;
+padding: 5px;
+margin-bottom: 20px;
+background-color: #f5f5f5;
+border: 1px solid #e3e3e3;
+}
+
+.icon-ok-sign:hover{
+  color: green;
+}
+
+.icon-gears:hover{
+  color: #e67e22;
+}
+ .icon-legal:hover{
+    color: #16a085;
+ }
+
+.icon-gear:hover{
+    color: #3498db;
+}
+ 
+/* slide css */
+
+#nav-handler {
+display: none;
+}
+
+#header {
+position: static;
+top: 0;
+left: 0;
+width: 100%;
+height: 75px;
+padding: 20px;
+text-align: center;
+z-index: 2;
+border-bottom: 1px solid #bbb;
+background: #eee;
+}
+
+#menu-button {
+top: 10px;
+text-align: center;
+color: #fff;
+cursor: default;
+
+}
+
+ 
+#nav-handler:checked ~ #menu-button {
+color: #08c;
+border: 1px solid #08c;
+}
+
+
+#nav {
+position: fixed;
+padding-top: 20px;
+left: 0;
+width: 80%;
+height: 100%;
+z-index: 1;
+overflow: hidden;
+-webkit-overflow-scrolling: touch;
+transition: opacity 0s .25s;
+-moz-transition: opacity 0s .25s;
+-webkit-transition: opacity 0s .25s;
+border-right: 1px solid #bbb;
+background: #fff;
+color: #555;
+}
+
+ 
+
+#main-container {
+display: block;
+position: relative;
+height: 100%;
+transition: -moz-transform .25s ease-in-out;
+-moz-transition: -moz-transform .25s ease-in-out;
+-webkit-transition: -webkit-transform .25s ease-in-out;
+z-index: 5;
+}
+ 
+
+#nav-handler:checked ~ #main-container,
+.nav-handler-checked {
+transform: translate3D(80%,0,0);  
+-moz-transform: translate3D(80%,0,0); 
+-webkit-transform: translate3D(80%,0,0);
+}
+
+ 
+#content-container {
+position: relative;
+width: 100%;
+height: 100%;
+padding: 15px 0 0 0;
+overflow-y: scroll;
+-webkit-overflow-scrolling: touch;
+z-index: -1;
+background: #ccc !important;
+}
+
+.ia{
+  display: none;
+}
+
+#main-container {
+display: block;
+position: relative;
+height: 100%;
+transition: -moz-transform .25s ease-in-out;
+-moz-transition: -moz-transform .25s ease-in-out;
+-webkit-transition: -webkit-transform .25s ease-in-out;
+z-index: 5;
+}
+
+#nav-handler:checked ~ #main-container,
+.nav-handler-checked {
+transform: translate3D(80%,0,0);
+-moz-transform: translate3D(80%,0,0);
+-webkit-transform: translate3D(80%,0,0);
+}
+
+#content-container {
+position: relative;
+width: 100%;
+height: 100%;
+padding: 15px 0 0 0;
+overflow-y: scroll;
+-webkit-overflow-scrolling: touch;
+background: #fff;
+z-index: -1;
+}
+
+.ia{
+  display: none;
+}
+
+.menu{
+  margin-top: 6px;
 }

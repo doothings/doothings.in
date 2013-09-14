@@ -1,6 +1,4 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
-@import url('fonts/fonts.css');
-@import url('reset.css');
 
 body {
 	padding-top: 50px;

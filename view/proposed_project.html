@@ -1,10 +1,10 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="canonical" href="http://www.miguelmota.com/blog/slide-out-navigation-using-css3-translate/demo/index.html">
+  <link rel="shortcut icon" href="..//assets/ico/doo.png">
+  <link rel="stylesheet" href="slide.css">
   <link rel="shortcut icon" href="../../assets/ico/favicon.png">
   <title>proposed_project</title>
   <!-- Bootstrap core CSS -->
@@ -20,93 +20,353 @@
   <link href="..//assets/css/proposed.css" rel="stylesheet">
   <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
   <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="../../assets/js/html5shiv.js"></script>
-      <script src="../../assets/js/respond.min.js"></script>
-      <![endif]-->
-    </head>
-    <body>
-      <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand brandrotate logoset" style="margin: 0; padding:0;" href="../index.html"><img src="..//assets/images/doo.png" class="logo"></a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#about">About</a></li>
-            <li><a href="..//view/contact.html">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="..//view/calendar.html">Calender</a></li>
-                <li><a href="#">Blog</a></li>
-              </ul>
-            </li>
+
+</head>
+<body>
+
+
+  <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand brandrotate logoset" style="margin: 0; padding:0;" href="../index.html"><img src="..//assets/images/doo.png" class="logo"></a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="..//view/contact.html">Contact</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="..//view/calendar.html">Calender</a></li>
+            <li><a href="..//view/blog.html">Blog</a></li>
+            <li><a href="project.html">Projects</a></li>
           </ul>
-          <a href="project.html"><span class="btn btn-primary pull-right" style="margin-top: 10px;">Back</a></span>
-        </div><!-- /.nav-collapse -->
-      </div>
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="container" style="padding-top: 20px">
-
-       <div class="col-md-8 well col-md-offset-2">
-        <div class="row">
-          <div class="col-md-5">
-            <label>First Name</label><br/>
-            <input type="text" placeholder="Your First Name" class="form-control"> <br/>
-            <label>Last Name</label><br/>
-            <input type="text" placeholder="Your Last Name" class="form-control"> <br/>
-            <label>Email Address</label><br/>
-            <input type="text" placeholder="Your email address" class="form-control"> <br/>
-            <label>Mobile Number</label><br/>
-            <input type="text" placeholder="Your mobile number" class="form-control" style="-wap-input-format: 'N'"/> <br/>
-            <label>Subject</label><br/>
-
-
-            <div class="btn-group">
-              <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
-                Choose one<span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a href=""> Suggestions</li></a>
-                <li><a href=""> Project Details</li></a>
-              </ul>
-              </div>
-
-              <div style="margin-top: 10px;">
-              <label>Upload image</label>
-              <div class="input-group">
-                <span class="input-group-addon">
-                  <i class="icon-picture"></i>
-                </span>
-                <input type="text" id="" name="" class="form-control">
-                <span class="input-group-addon btn" type="button">
-                  <i class="icon-upload"></i>
-                </span>
-              </div>
-              </div>
-
+        </li>
+        <li class="menu">
+          <label class="btn btn-primary" id="menu-button" for="nav-handler">Create New Project</label>
+        </li>
+      </ul>
+      <a href="project.html"><span class="btn btn-primary pull-right" style="margin-top: 10px;">Back</a></span>
+    </div><!-- /.nav-collapse -->
+  </div>
+  <!-- Nav Handler MUST be at the top! -->
+  <input type="checkbox" id="nav-handler" class="ia">
+  <!-- Slide Out Navigation -->
+  <nav id="nav">
+   <div class="container" style="padding-top: 20px">
+     <div class="col-md-8 well col-md-offset-2">
+      <div class="row">
+        <div class="col-md-5">
+          <label>First Name</label><br/>
+          <input type="text" placeholder="Your First Name" class="form-control"> <br/>
+          <label>Last Name</label><br/>
+          <input type="text" placeholder="Your Last Name" class="form-control"> <br/>
+          <label>Email Address</label><br/>
+          <input type="text" placeholder="Your email address" class="form-control"> <br/>
+          <label>Mobile Number</label><br/>
+          <input type="text" placeholder="Your mobile number" class="form-control" style="-wap-input-format: 'N'"/>
+          <br/>
+          <div style="margin-top: 10px;">
+            <label>Upload</label>
+            <div class="input-group">
+              <input type="text" id="" name="" class="form-control">
+              <label for="exampleInputFile"></label>
+              <span class="input-group-addon" type="button" style="padding: 0;">
+                <input type="file"  style="width: 40px; overflow: hidden;">                  
+              </span>
+            </div>
           </div>
-          <div class="col-md-6">
-           <label>Message</label><br/>
-           <textarea name="message" id="message" class="col-md-12" rows="10"></textarea><br/>
-           <br/><span style="margin-top: 5px;"><button type="submit" class="btn btn-primary">Send</button></span>
-         </div>
+        </div>
+        <div class="col-md-6">
+         <label>Message</label><br/>
+         <textarea name="message" id="message" class="col-md-12" rows="10" style="resize:none;"></textarea><br/>
+         <br/><span style="margin-top: 5px;"><button type="submit" class="btn btn-primary">Send</button></span>
        </div>
      </div>
    </div>
+ </div>
+</nav>
+
+<!-- Main Container -->
+<main id="main-container">
+  <section id="content-container">
+    <div class="navbar" role="navigation">
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="container">
+        <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+        <div class="row">
+          <div class="col-md-4 col-sm-4">
+            <div class="pan">
+              <h2 align="center"><a href="">Project Title</a></h2>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+              <hr>
+              <span style="width: auto; float: left;"><a href=""> <p>...more</p></a></span>
+              <p align="right">
+                <a href=""><i class="icon-thumbs-up"></i></a> 10
+                | <a href=""><i class="icon-comment"></i></a> 3
+                | <a href=""><i class="icon-share"></i></a> 39
+              </p>
+            </div>
+
+            <!-- 2nd-->
+
+            <div class="pan">
+              <h2 align="center"><a href="">Project Title</a></h2>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper feugait nulla facilisi.</p>
+              <hr>
+              <span style="width: auto; float: left;"><a href=""> <p>...more</p></a></span>
+              <p align="right">
+                <a href=""><i class="icon-thumbs-up"></i></a> 10
+                | <a href=""><i class="icon-comment"></i></a> 3
+                | <a href=""><i class="icon-share"></i></a> 39
+              </p>
+            </div>
+
+            <!-- end-->
+
+            <div class="pan">
+              <h2 align="center"><a href="">Project Title</a></h2>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut </p>
+              <hr>
+              <span style="width: auto; float: left;"><a href=""> <p>...more</p></a></span>
+              <p align="right">
+                <a href=""><i class="icon-thumbs-up"></i></a> 10
+                | <a href=""><i class="icon-comment"></i></a> 3
+                | <a href=""><i class="icon-share"></i></a> 39
+              </p>
+            </div>
+
+            <!-- end -->
+
+            <div class="pan">
+              <h2 align="center"><a href="">Project Title</a></h2>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper feugait nulla facilisi.</p>
+              <hr>
+              <span style="width: auto; float: left;"><a href=""> <p>...more</p></a></span>
+              <p align="right">
+                <a href=""><i class="icon-thumbs-up"></i></a> 10
+                | <a href=""><i class="icon-comment"></i></a> 3
+                | <a href=""><i class="icon-share"></i></a> 39
+              </p>
+            </div>
+
+            <!-- end-->
+
+            <div class="pan">
+              <h2 align="center"><a href="">Project Title</a></h2>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut </p>
+              <hr>
+              <span style="width: auto; float: left;"><a href=""> <p>...more</p></a></span>
+              <p align="right">
+                <a href=""><i class="icon-thumbs-up"></i></a> 10
+                | <a href=""><i class="icon-comment"></i></a> 3
+                | <a href=""><i class="icon-share"></i></a> 39
+              </p>
+            </div>
+
+          </div>
+          <div class=" col-md-4 col-sm-4">
+            <div class="pan">
+              <h2 align="center"><a href="">Project Title</a></h2>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper feugait nulla facilisi.</p>
+              <hr>
+              <span style="width: auto; float: left;"><a href=""> <p>...more</p></a></span>
+              <p align="right">
+                <a href=""><i class="icon-thumbs-up"></i></a> 10
+                | <a href=""><i class="icon-comment"></i></a> 3
+                | <a href=""><i class="icon-share"></i></a> 39
+              </p>
+            </div>
+            <!-- end-->
+            <div class="pan">
+              <h2 align="center"><a href="">Project Title</a></h2>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut </p>
+              <hr>
+              <span style="width: auto; float: left;"><a href=""> <p>...more</p></a></span>
+              <p align="right">
+                <a href=""><i class="icon-thumbs-up"></i></a> 10
+                | <a href=""><i class="icon-comment"></i></a> 3
+                | <a href=""><i class="icon-share"></i></a> 39
+              </p>
+            </div>
+
+            <!-- end -->
+
+            <div class="pan">
+              <h2 align="center"><a href="">Project Title</a></h2>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut </p>
+                <hr>
+                <span style="width: auto; float: left;"><a href=""> <p>...more</p></a></span>
+                <p align="right">
+                  <a href=""><i class="icon-thumbs-up"></i><a href="#"></a> 10
+                  | <a href=""><i class="icon-comment"></i> <a href="#"</a>3
+                  | <a href=""><i class="icon-share"></i> <a href="#"</a>39
+                </p>
+              </div>
+
+              <!-- end -->
+
+              <div class="pan">
+                <h2 align="center"><a href="">Project Title</a></h2>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut </p>
+                  <hr>
+                  <span style="width: auto; float: left;"><a href=""> <p>...more</p></a></span>
+                  <p align="right">
+                    <a href=""><i class="icon-thumbs-up"></i><a href="#"></a> 10
+                    | <a href=""><i class="icon-comment"></i> <a href="#"</a>3
+                    | <a href=""><i class="icon-share"></i> <a href="#"</a>39
+                  </p>
+                </div>
+
+                <!-- end -->
+
+                <div class="pan">
+                  <h2 align="center"><a href="">Project Title</a></h2>
+                  <hr>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor</p>
+                  <hr>
+                  <span style="width: auto; float: left;"><a href=""> <p>...more</p></a></span>
+                  <p align="right">
+                    <a href=""><i class="icon-thumbs-up"></i></a> 10
+                    | <a href=""><i class="icon-comment"></i></a> 3
+                    | <a href=""><i class="icon-share"></i></a> 39
+                  </p>
+                </div>
+
+                <!-- end -->
+              </div>
+              <div class=" col-md-4 col-sm-4">
+                <div class="pan">
+                  <h2 align="center"><a href="">Project Title</a></h2>
+                  <hr>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+                  <hr>
+                  <span style="width: auto; float: left;"><a href=""> <p>...more</p></a></span>
+                  <p align="right">
+                    <a href=""><i class="icon-thumbs-up"></i></a> 10
+                    | <a href=""><i class="icon-comment"></i></a> 3
+                    | <a href=""><i class="icon-share"></i></a> 39
+                  </p>
+                </div>
+
+                <!-- 2nd-->
+
+                <div class="pan">
+                  <h2 align="center"><a href="">Project Title</a></h2>
+                  <hr>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper feugait nulla facilisi.</p>
+                  <hr>
+                  <span style="width: auto; float: left;"><a href=""> <p>...more</p></a></span>
+                  <p align="right">
+                    <a href=""><i class="icon-thumbs-up"></i><a href="#"></a> 10
+                    | <a href=""><i class="icon-comment"></i> <a href="#"</a>3
+                    | <a href=""><i class="icon-share"></i> <a href="#"</a>39
+                  </p>
+                </div>
+
+                <!-- end-->
+
+                <div class="pan">
+                  <h2 align="center"><a href="">Project Title</a></h2>
+                  <hr>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut </p>
+                  <hr>
+                  <span style="width: auto; float: left;"><a href=""> <p>...more</p></a></span>
+                  <p align="right">
+                    <a href=""><i class="icon-thumbs-up"></i><a href="#"></a> 10
+                    | <a href=""><i class="icon-comment"></i> <a href="#"</a>3
+                    | <a href=""><i class="icon-share"></i> <a href="#"</a>39
+                  </p>
+                </div>
+
+                <!-- end -->
+
+                <div class="pan">
+                  <h2 align="center"><a href="">Project Title</a></h2>
+                  <hr>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut </p>
+                    <hr>
+                    <span style="width: auto; float: left;"><a href=""> <p>...more</p></a></span>
+                    <p align="right">
+                      <a href=""><i class="icon-thumbs-up"></i><a href="#"></a> 10
+                      | <a href=""><i class="icon-comment"></i> <a href="#"</a>3
+                      | <a href=""><i class="icon-share"></i> <a href="#"</a>39
+                    </p>
+                  </div>
+
+                  <!-- end -->
+
+                  <div class="pan">
+                    <h2 align="center"><a href="">Project Title</a></h2>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut </p>
+                      <hr>
+                      <span style="width: auto; float: left;"><a href=""> <p>...more</p></a></span>
+                      <p align="right">
+                        <a href=""><i class="icon-thumbs-up"></i><a href="#"></a> 10
+                        | <a href=""><i class="icon-comment"></i> <a href="#"</a>3
+                        | <a href=""><i class="icon-share"></i> <a href="#"</a>39
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
 
 
+              </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../../assets/js/jquery.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-  </body>
-  </html>
+            </section>
+
+          </main>
+
+          <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+          <script>
+          /* Android support */
+          if (/Android/i.test(navigator.userAgent)) {
+            $('#nav-handler').on('click', function(e){
+              e.preventDefault();
+              $mainContainer = $('#main-container');
+              if ($mainContainer.hasClass('nav-handler-checked')) {
+                $mainContainer.removeClass('nav-handler-checked');
+              } else {
+                $mainContainer.addClass('nav-handler-checked');
+              }
+            });
+          }
+          </script>
+
+          <script>
+          /* Google Analytics */
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-12642068-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+          </script>
+
+        </body>
+        </html>
