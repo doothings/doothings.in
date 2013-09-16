@@ -1,7 +1,4 @@
 doothings.in
-============
-
-doothings.in
 
 
 IRC : #doothings

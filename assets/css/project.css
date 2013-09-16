@@ -159,3 +159,10 @@ background: cornsilk;
   color: #fff;
   font-weight: lighter;
 }
+
+.lets{
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHklEQVQIW2NkQAU+jEh8HyB7C0wAzAFJggTgHJAAAFXuA1E5qtLyAAAAAElFTkSuQmCC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 525%;
+}

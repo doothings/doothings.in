@@ -496,3 +496,9 @@ z-index: -1;
 .menu{
   margin-top: 6px;
 }
+
+.headline{
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHklEQVQIW2NkQAU+jEh8HyB7C0wAzAFJggTgHJAAAFXuA1E5qtLyAAAAAElFTkSuQmCC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
