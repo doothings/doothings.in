@@ -79,6 +79,7 @@ code {
 
 .im{
   margin-right: 10px;
+  font-size: 150%;
  
 }
 
@@ -86,5 +87,5 @@ code {
   margin-top: 25px;
 }
 .text{
-  color: #333;
+  color: grey;
 }

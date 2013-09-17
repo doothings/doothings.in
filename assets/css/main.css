@@ -5,6 +5,7 @@
 body {
   padding-bottom: 0px !important;
   color: #5a5a5a;
+  background: #1abc9c;
 }
 
 
@@ -89,40 +90,56 @@ body {
 
 }
 
-.stickynote{
-  text-decoration:none;
-  color:#000;
-  background:#ffc;
-  display:block;
-  padding:1em;
-  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
-  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-  -webkit-transform: rotate(-5deg);
-}
-
-.stickynote1{
-  text-decoration:none;
-  color:#000;
-  background:#ffc;
-  display:block;
-  padding:1em;
-  margin-top: 5px;
-  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
-  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-  -webkit-transform: rotate(5deg);
-}
-
-.footer{
-  background: #ccc;
-  margin-bottom: -1%;
-  bottom: 0%;
-
-}
+ 
 
 .navbar-wrapper{
   margin-top: 0px;
 
 }
  
+ 
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+ 
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+#wrap > .container {
+  padding: 60px 15px 0;
+}
+.container .credit {
+  margin: 20px 0;
+}
+
+#footer > .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+.text{
+  color: #fff;
+}

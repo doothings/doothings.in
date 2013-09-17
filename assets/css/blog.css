@@ -206,3 +206,21 @@ p.info {
   background: #eee;
   
 }
+
+.brandrotate{
+  -webkit-transform: rotate(-15deg);
+  margin-right: 25px;
+  margin-left: 20px;
+  text-align: center;
+  color: #fff;
+  font-size: 250%;
+}
+
+.logo {
+  width: 75px;
+}
+
+ul,li{
+  list-style: none;
+  line-height: 2em;
+}

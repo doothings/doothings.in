@@ -18,16 +18,6 @@ body {
 	margin: 2px;
 }
  
-.arrow{
-	width: 0; 
-	height: 0; 
-	border-top: 300px solid transparent;
-	border-bottom: 0px 10px solid transparent;
-	border-left: 300px solid grey;
-	left:0; bottom:0px !important;
-	position: fixed;
-}
-
 .circle{
 	height: 100px;
 	width: 100px;
