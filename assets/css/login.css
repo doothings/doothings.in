@@ -1,0 +1,89 @@
+.spi{
+	background-image: url('./assets/images/doo.png') !important;
+	
+}
+
+.doo
+{
+font: bold 600% opificio;
+letter-spacing: 0px;
+position:relative;
+color: #16a085;
+animation:mymove 5s infinite;
+animation-delay:2s;
+
+/*Safari and Chrome*/
+-webkit-animation:mymove 2s infinite;
+-webkit-animation-delay:2s;
+}
+
+@keyframes mymove
+{
+from {left:0px;}
+to {left:200px;}
+}
+
+@-webkit-keyframes mymove /*Safari and Chrome*/
+{
+from {left:0px;}
+to {right:20px;}
+
+to {right:0px;}
+from {left:20px;}
+}
+
+
+.welcome { 
+	font: bold 600% arial;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: typing 2s steps(21, end),
+	           blink-caret .5s step-end infinite alternate;
+}
+
+.toofani{
+	font-size: 20px; letter-spacing:35px; color: grey; text-align: center;}
+
+
+@media (min-width: 150px) and (max-width: 250px){
+
+	.toofani{
+		font-size: 20px !important;
+		letter-spacing: 10px;
+	}
+}
+
+@media (min-width: 150px) and (max-width: 349px){
+
+	.welcome{
+		font-size: 40px !important;
+	}
+	.doo{
+		margin-top: 50px;
+	}
+	.toofani{
+		font-size: 20px !important;
+		letter-spacing: 10px;
+	}
+}
+
+@media (min-width: 351px) and (max-width: 449px){
+
+	.welcome{
+		font-size: 60px !important;
+	}
+	.doo{
+		font-size: 10px;
+		margin-top: 0px !important;
+	}
+}
+
+section {
+     width: 100%;
+     position: fixed;
+     height: 100%;
+}
+
+.divider{
+	border-right: 1px dotted grey;
+}
